@@ -39,6 +39,7 @@ defaultRules:
     node: true
     prometheus: true
     prometheusOperator: true
+    grafana: true
 
   ## Labels for default rules
   labels: {}
