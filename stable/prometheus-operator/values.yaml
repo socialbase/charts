@@ -24,24 +24,21 @@ commonLabels: {}
 defaultRules:
   create: true
   rules:
-    alertmanager: true
+    alertmanager: false
     etcd: true
     general: true
     k8s: true
     kubeApiserver: true
-    kubePrometheusNodeAlerting: true
+    kubePrometheusNodeAlerting: false
     kubePrometheusNodeRecording: true
-    kubernetesAbsent: true
+    kubernetesAbsent: false
     kubernetesApps: true
     kubernetesResources: true
     kubernetesStorage: true
     kubernetesSystem: true
-    kubeScheduler: true
-    network: true
     node: true
     prometheus: true
     prometheusOperator: true
-    time: true
 
   ## Labels for default rules
   labels: {}
@@ -468,12 +465,12 @@ grafana:
   #   url: https://prometheus.svc:9090
   #   version: 1
 
-  persistence:
-    enabled: true
-    storageClassName: gp2
-    accessModes:
-      - ReadWriteOnce
-    size: 10Gi
+  #  persistence:
+  #  enabled: true
+  #  storageClassName: gp2
+  #  accessModes:
+  #    - ReadWriteOnce
+  #  size: 10Gi
 
   ## If true, create a serviceMonitor for grafana
   ##
