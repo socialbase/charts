@@ -1571,7 +1571,7 @@ prometheus:
 
       - job_name: "mongodb"
 #      - job_name: "netdata"
-        metrics_path: '/api/v1/allmetrics'
+#       metrics_path: '/api/v1/allmetrics'
         params:
           # format: prometheus | prometheus_all_hosts
           # You can use `prometheus_all_hosts` if you want Prometheus to set the `instance` to your hostname instead of IP
@@ -1601,7 +1601,7 @@ prometheus:
             action: keep
         ec2_sd_configs:
           - region: sa-east-1
-            port: 9216
+            port: 9001
 #            port: 19999
 
       - job_name: 'kubernetes-service-endpoints'
