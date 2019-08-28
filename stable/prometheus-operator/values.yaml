@@ -1568,7 +1568,9 @@ prometheus:
           - source_labels: [__meta_ec2_tag_node_exporter]
             regex: (true)
             action: keep
-      - job_name: "netdata"
+
+      - job_name: "mongodb"
+#      - job_name: "netdata"
         metrics_path: '/api/v1/allmetrics'
         params:
           # format: prometheus | prometheus_all_hosts
@@ -1597,10 +1599,11 @@ prometheus:
           - source_labels: [__meta_ec2_tag_netdata]
             regex: (true)
             action: keep
-
         ec2_sd_configs:
           - region: sa-east-1
-            port: 19999
+            port: 9216
+#            port: 19999
+
       - job_name: 'kubernetes-service-endpoints'
         kubernetes_sd_configs:
           - role: endpoints
