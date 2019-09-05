@@ -24,7 +24,7 @@ commonLabels: {}
 defaultRules:
   create: true
   rules:
-    alertmanager: true
+    alertmanager: false
     etcd: true
     general: true
     k8s: true
@@ -75,7 +75,7 @@ alertmanager:
 
   ## Deploy alertmanager
   ##
-  enabled: true
+  enabled: false
 
   ## Service account for Alertmanager to use.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
