@@ -1688,8 +1688,8 @@ prometheus:
             target_label: kubernetes_pod_name
 
       - job_name: 'workbetter'
-          metrics_path: '/api/actuator/prometheus'
-          static_configs:
+        metrics_path: '/api/actuator/prometheus'
+        static_configs:
           - targets: ['espacos.socialbase.com.br']
 
 
