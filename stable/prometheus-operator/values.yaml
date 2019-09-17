@@ -1687,10 +1687,6 @@ prometheus:
             action: replace
             target_label: kubernetes_pod_name
 
-      - job_name: 'workbetter'
-          metrics_path: '/api/actuator/prometheus'
-          static_configs:
-          - targets: [ 'espacos.socialbase.com.br' ]
 
     ## AdditionalAlertManagerConfigs allows for manual configuration of alertmanager jobs in the form as specified
     ## in the official Prometheus documentation https://prometheus.io/docs/prometheus/latest/configuration/configuration/#<alertmanager_config>.
