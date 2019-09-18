@@ -1689,8 +1689,10 @@ prometheus:
 
       - job_name: 'workbetter'
         metrics_path: '/api/actuator/prometheus'
+        scheme: 'https'
         static_configs:
-          - targets: ['espacos.socialbase.com.br:443']
+          - targets: ['espacos.socialbase.com.br']
+
 
 
     ## AdditionalAlertManagerConfigs allows for manual configuration of alertmanager jobs in the form as specified
