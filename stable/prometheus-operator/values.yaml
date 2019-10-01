@@ -1687,11 +1687,17 @@ prometheus:
             action: replace
             target_label: kubernetes_pod_name
 
-      - job_name: 'workbetter'
+      - job_name: 'workbetter-rancher'
         metrics_path: '/api/actuator/prometheus'
         scheme: 'https'
         static_configs:
           - targets: ['espacos.socialbase.com.br']
+
+      - job_name: 'workbetter-heroku'
+        metrics_path: '/api/actuator/prometheus'
+        scheme: 'https'
+        static_configs:
+          - targets: ['workbetter-api.herokuapp.com']
 
 
 
